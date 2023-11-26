@@ -1,0 +1,3 @@
+-- Databricks notebook source
+--DROP TABLE default.item_prices;
+--DROP TABLE default.item_info
