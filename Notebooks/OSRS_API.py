@@ -1,6 +1,6 @@
 # Databricks notebook source
 import requests, json, time
-from pyspark.sql.functions import from_json
+from pyspark.sql.functions import from_json, lit
 #URL Variables
 urlPrice = 'https://prices.runescape.wiki/api/v1/osrs/latest'
 urlItem = 'https://oldschool.runescape.wiki/?title=Module:GEIDs/data.json&action=raw&ctype=application%2Fjson'
