@@ -1,7 +1,6 @@
 # Databricks notebook source
-import requests, json, pandas as pd, time
-import pyspark.pandas as ps
-from pyspark.sql.functions import from_json, col, explode, lit
+import requests, json, time
+from pyspark.sql.functions import from_json
 #URL Variables
 urlPrice = 'https://prices.runescape.wiki/api/v1/osrs/latest'
 urlItem = 'https://oldschool.runescape.wiki/?title=Module:GEIDs/data.json&action=raw&ctype=application%2Fjson'
@@ -91,13 +90,3 @@ df_items.createOrReplaceTempView("tmp_items")
 # MAGIC     tmp_itemprice.LowTime,
 # MAGIC     tmp_itemprice.ScanTime
 # MAGIC   );
-
-# COMMAND ----------
-
-# MAGIC %sql
-# MAGIC SELECT * FROM default.item_prices
-
-# COMMAND ----------
-
-# MAGIC %sql
-# MAGIC SELECT * FROM default.item_info
